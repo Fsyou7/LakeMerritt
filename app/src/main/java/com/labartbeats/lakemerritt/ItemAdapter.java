@@ -58,11 +58,25 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         Item currentItem = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID info_text
-        TextView merrittTextView = (TextView) listItemView.findViewById(R.id.info_text);
+        TextView merrittTitleTextView = (TextView) listItemView.findViewById(R.id.list_title);
 
         // Get the item_title from the current Item object and
         // set this text on the item_title TextView
-        merrittTextView.setText(currentItem.getItemTitle());
+        merrittTitleTextView.setText(currentItem.getItemTitle());
+
+        // Find the TextView in the list_item.xml layout with the ID info_text
+        TextView merrittDescriptionTextView = (TextView) listItemView.findViewById(R.id.list_description);
+
+        // Get the item_description from the current Item object and
+        // set this text on the item_title TextView
+        merrittDescriptionTextView.setText(currentItem.getItemDescription());
+
+        // Find the TextView in the list_item.xml layout with the ID info_text
+        TextView merrittContentTextView = (TextView) listItemView.findViewById(R.id.list_text);
+
+        // Get the item_description from the current Item object and
+        // set this text on the item_title TextView
+        merrittContentTextView.setText(currentItem.getItemText());
 
 //        /*
 //        * Find the ImageView in the list_item.xml layout with the ID @id/image
@@ -81,10 +95,10 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 //            /*Otherwise hide the ImageView (set visibility to GONE)*/
 //            iconImageView.setVisibility(View.GONE);
 //        }
-         /*
-        * Find the ViewGroup in the list_item.xml layout with the ID @id/card_view
-        * */
-        ViewGroup listView = (ViewGroup) listItemView.findViewById(R.id.card_view);
+//         /*
+//        * Find the ViewGroup in the list_item.xml layout with the ID @id/list_view
+//        * */
+        ViewGroup listView = (ViewGroup) listItemView.findViewById(R.id.list_view);
 
         listView.setBackgroundColor(ContextCompat.getColor(getContext(), mColorResource));
 

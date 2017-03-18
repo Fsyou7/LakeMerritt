@@ -20,7 +20,6 @@ public class RecreationFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,7 +33,7 @@ public class RecreationFragment extends Fragment {
 
         // Create an {@link ItemAdapter}, whose data source is a list of {@link Item}s. The
         // adapter knows how to create list items for each item in the list.
-        ItemAdapter adapter = new ItemAdapter(getActivity(), fun, R.color.tab_indicator);
+        ItemAdapter adapter = new ItemAdapter(getActivity(), fun, R.color.funBackground);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

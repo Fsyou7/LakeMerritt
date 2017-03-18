@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="tab_indicator">#FF4081</color>
-    <color name="tab_text">#FF4081</color>
+    <color name="tab_text">#FFFFFF</color>
     <color name="tab_selected">#FF4081</color>
+    <color name="funBackground">#0000FF</color>
 </resources>
