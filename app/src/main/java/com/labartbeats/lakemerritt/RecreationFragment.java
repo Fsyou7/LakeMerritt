@@ -15,7 +15,6 @@ import java.util.ArrayList;
  */
 public class RecreationFragment extends Fragment {
 
-
     public RecreationFragment() {
         // Required empty public constructor
     }
@@ -27,9 +26,10 @@ public class RecreationFragment extends Fragment {
 
         // Create a list of words
         ArrayList<Item> fun = new ArrayList<Item>();
-        fun.add(new Item("Title", "Description", "Lorem ipsum dolor sit amet, nec suscipit verterem ea. Euismod copiosae maluisset ea vix, mucius cetero sadipscing ad pri. An nam legere ignota blandit. No his oratio officiis perpetua, sit id nonumy delicatissimi. Ei duo debet expetendis, cu veri habeo civibus sit.\n" +
-                "\n" +
-                "Illum facer ea eam, sed adhuc latine sanctus at"));
+        fun.add(new Item("Cleveland Cascade", "250-foot Stairway", "It was constructed in the 1920s as a park with flowing water down the center of the stairs. Though Cleveland Cascade has been dry since the ’50s, it remains as a place to add an extra kick to your workout if jogging the lake just isn’t enough."));
+        fun.add(new Item("Children's Fairyland", "Children's Amusement Park", "Children’s Fairyland is a timeless reminder of the joys of standing three-feet tall."));
+        fun.add(new Item("Oakland Museum of California", "Art, History and Natural Science Museum", "Children’s Fairyland is a timeless reminder of the joys of standing three-feet tall."));
+        fun.add(new Item("Lake Chalet", "Restaurant", "The Lake Chalet restaurant is known for its impeccable views and, if you show up on a nice day, there’s lakeside seating available. "));
 
         // Create an {@link ItemAdapter}, whose data source is a list of {@link Item}s. The
         // adapter knows how to create list items for each item in the list.
