@@ -7,4 +7,5 @@
     <color name="tab_text">#FFFFFF</color>
     <color name="tab_selected">#FF4081</color>
     <color name="funBackground">#0000FF</color>
+    <color name="foodBackground">#0000FF</color>
 </resources>

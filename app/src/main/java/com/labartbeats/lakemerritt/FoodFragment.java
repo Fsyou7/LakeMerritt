@@ -1,6 +1,5 @@
 package com.labartbeats.lakemerritt;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,28 +15,25 @@ import java.util.ArrayList;
  */
 public class FoodFragment extends Fragment {
 
-
     public FoodFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View rootView = inflater.inflate(R.layout.list_item, container, false);
+        View rootView = inflater.inflate(R.layout.item_list, container, false);
 
         // Create a list of words
-        ArrayList<Item> fun = new ArrayList<Item>();
-        fun.add(new Item("Cleveland Cascade", "250-foot Stairway", "It was constructed in the 1920s as a park with flowing water down the center of the stairs. Though Cleveland Cascade has been dry since the ’50s, it remains as a place to add an extra kick to your workout if jogging the lake just isn’t enough."));
-        fun.add(new Item("Children's Fairyland", "Children's Amusement Park", "Children’s Fairyland is a timeless reminder of the joys of standing three-feet tall."));
-        fun.add(new Item("Oakland Museum of California", "Art, History and Natural Science Museum", "Children’s Fairyland is a timeless reminder of the joys of standing three-feet tall."));
-        fun.add(new Item("Lake Chalet", "Restaurant", "The Lake Chalet restaurant is known for its impeccable views and, if you show up on a nice day, there’s lakeside seating available. "));
+        ArrayList<Item> food = new ArrayList<Item>();
+        food.add(new Item("Cleveland Cascade", "250-foot Stairway", "It was constructed in the 1920s as a park with flowing water down the center of the stairs. Though Cleveland Cascade has been dry since the ’50s, it remains as a place to add an extra kick to your workout if jogging the lake just isn’t enough."));
+        food.add(new Item("Children's Fairyland", "Children's Amusement Park", "Children’s Fairyland is a timeless reminder of the joys of standing three-feet tall."));
+        food.add(new Item("Oakland Museum of California", "Art, History and Natural Science Museum", "Children’s Fairyland is a timeless reminder of the joys of standing three-feet tall."));
+        food.add(new Item("Lake Chalet", "Restaurant", "The Lake Chalet restaurant is known for its impeccable views and, if you show up on a nice day, there’s lakeside seating available. "));
 
         // Create an {@link ItemAdapter}, whose data source is a list of {@link Item}s. The
         // adapter knows how to create list items for each item in the list.
-        ItemAdapter adapter = new ItemAdapter(getActivity(), fun, R.color.funBackground);
+        ItemAdapter adapter = new ItemAdapter(getActivity(), food, R.color.foodBackground);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
