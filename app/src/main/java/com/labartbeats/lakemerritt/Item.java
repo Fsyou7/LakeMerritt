@@ -8,13 +8,13 @@ package com.labartbeats.lakemerritt;
 public class Item {
 
     /*Title of the Item*/
-    private String mItemTitle;
+    private int mItemTitle;
 
     /*A brief description of the Item*/
-    private String mItemDescription;
+    private int mItemDescription;
 
     /*The text content of the item*/
-    private String mItemText;
+    private int mItemText;
 
     /*Reference to the image file*/
     private int mImageResourceId = NO_IMAGE_PROVIDED;
@@ -32,7 +32,7 @@ public class Item {
     * @param imageResourceId is the drawable resource ID of the image associated with the item
     * */
 
-    public Item (String itemTitle, String itemDescription, String itemText){
+    public Item (int itemTitle, int itemDescription, int itemText){
         mItemTitle = itemTitle;
         mItemDescription = itemDescription;
         mItemText = itemText;
@@ -49,7 +49,7 @@ public class Item {
     * @param imageResourceId is the drawable resource ID of the image associated with the item
     * */
 
-    public Item (String itemTitle, String itemDescription, String itemText, int imageResource){
+    public Item (int itemTitle, int itemDescription, int itemText, int imageResource){
         mItemTitle = itemTitle;
         mItemDescription = itemDescription;
         mItemText = itemText;
@@ -59,13 +59,13 @@ public class Item {
     /*
     * Getters for the member variables
     * */
-    public String getItemTitle() {
+    public int getItemTitle() {
         return mItemTitle;
     }
-    public String getItemDescription() {
+    public int getItemDescription() {
         return mItemDescription;
     }
-    public String getItemText() {
+    public int getItemText() {
         return mItemText;
     }
     public int getImageResourceId() {

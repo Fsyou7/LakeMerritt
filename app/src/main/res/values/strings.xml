@@ -3,6 +3,24 @@
 
     <string name="recreation_fragment">Fun</string>
 
+    <string name="cascade_title">Cleveland Cascade</string>
+
+    <string name="cascade_description">250-foot Stairway</string>
+
+    <string name="cascade_text">It was constructed in the 1920\'s as a park with flowing water down the center of the stairs. Though Cleveland Cascade has been dry since the \’50s, it remains as a place to add an extra kick to your workout if jogging the lake just isn\’t enough.</string>
+
+    <string name="fairyland_title">Children\'s Fairyland</string>
+
+    <string name="fairyland_description">Children\'s Amusement Park</string>
+
+    <string name="museum_title">Oakland Museum of California</string>
+
+    <string name="museum_description">Art, History, and Natural Science Museum</string>
+
+    <string name="chalet_title">Lake Chalet</string>
+
+    <string name="chalet_description">Restaurant</string>
+
     <string name="food_fragment">Food</string>
 
     <string name="work_fragment">Work</string>
@@ -10,4 +28,7 @@
     <string name="retail_fragment">Retail</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fairyland_text">Children’s Fairyland is a timeless reminder of the joys of standing three-feet tall.</string>
+    <string name="museum_text">Children’s Fairyland is a timeless reminder of the joys of standing three-feet tall.</string>
+    <string name="chalet_text">The Lake Chalet restaurant is known for its impeccable views and, if you show up on a nice day, there’s lakeside seating available.</string>
 </resources>
