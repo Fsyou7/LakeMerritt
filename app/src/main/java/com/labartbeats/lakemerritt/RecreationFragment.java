@@ -26,10 +26,10 @@ public class RecreationFragment extends Fragment {
 
         // Create a list of words
         ArrayList<Item> fun = new ArrayList<Item>();
-        fun.add(new Item(R.string.cascade_title, R.string.cascade_description, R.string.cascade_text));
-        fun.add(new Item(R.string.fairyland_title, R.string.fairyland_description, R.string.fairyland_text));
-        fun.add(new Item(R.string.museum_title, R.string.museum_description, R.string.museum_text));
-        fun.add(new Item(R.string.chalet_title, R.string.chalet_description, R.string.chalet_text));
+        fun.add(new Item(R.string.cascade_title, R.string.cascade_description, R.string.cascade_text, R.mipmap.cascade));
+        fun.add(new Item(R.string.fairyland_title, R.string.fairyland_description, R.string.fairyland_text, R.mipmap.chalet));
+        fun.add(new Item(R.string.museum_title, R.string.museum_description, R.string.museum_text, R.mipmap.fairyland));
+        fun.add(new Item(R.string.chalet_title, R.string.chalet_description, R.string.chalet_text, R.mipmap.museum));
 
         // Create an {@link ItemAdapter}, whose data source is a list of {@link Item}s. The
         // adapter knows how to create list items for each item in the list.
@@ -44,8 +44,8 @@ public class RecreationFragment extends Fragment {
         // {@link ListView} will display list items for each {@link Item} in the list.
         listView.setAdapter(adapter);
 
-        TextView textView = new TextView(getActivity());
-        textView.setText(R.string.hello_blank_fragment);
+//        TextView textView = new TextView(getActivity());
+//        textView.setText(R.string.hello_blank_fragment);
         return rootView;
     }
 

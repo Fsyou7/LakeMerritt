@@ -81,23 +81,23 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 //        /*
 //        * Find the ImageView in the list_item.xml layout with the ID @id/image
 //        * */
-//        ImageView iconImageView = (ImageView) listItemView.findViewById(R.id.image);
+        ImageView iconImageView = (ImageView) listItemView.findViewById(R.id.list_photo);
 //
-//        if(currentItem.hasImage()) {
-//        /*
-//        * Get the image resource ID from the current word object and
-//        * set the image on the image ImageView
-//        * */
-//            iconImageView.setImageResource(currentItem.getImageResourceId());
-//            /*Make sure the view is visible*/
-//            iconImageView.setVisibility(View.VISIBLE);
-//        } else {
-//            /*Otherwise hide the ImageView (set visibility to GONE)*/
-//            iconImageView.setVisibility(View.GONE);
-//        }
-//         /*
-//        * Find the ViewGroup in the list_item.xml layout with the ID @id/list_view
-//        * */
+        if(currentItem.hasImage()) {
+        /*
+        * Get the image resource ID from the current word object and
+        * set the image on the image ImageView
+        * */
+            iconImageView.setImageResource(currentItem.getImageResourceId());
+            /*Make sure the view is visible*/
+            iconImageView.setVisibility(View.VISIBLE);
+        } else {
+            /*Otherwise hide the ImageView (set visibility to GONE)*/
+            iconImageView.setVisibility(View.GONE);
+        }
+         /*
+        * Find the ViewGroup in the list_item.xml layout with the ID @id/list_view
+        * */
         ViewGroup listView = (ViewGroup) listItemView.findViewById(R.id.list_view);
 
         listView.setBackgroundColor(ContextCompat.getColor(getContext(), mColorResource));
