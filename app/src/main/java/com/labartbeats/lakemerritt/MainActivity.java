@@ -1,5 +1,6 @@
 package com.labartbeats.lakemerritt;
 
+
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -30,5 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Remove the drop shadow from the action bar
         getSupportActionBar().setElevation(0);
+
+
+
     }
 }

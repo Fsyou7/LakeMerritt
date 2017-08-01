@@ -1,14 +1,20 @@
 package com.labartbeats.lakemerritt;
 
+import android.content.Intent;
 import android.os.Bundle;
+
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
+
+import static android.R.attr.fragment;
+//import android.app.FragmentTransaction;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,14 +28,14 @@ public class RecreationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.item_list, container, false);
+        final View rootView = inflater.inflate(R.layout.item_list, container, false);
 
         // Create a list of words
         ArrayList<Item> fun = new ArrayList<Item>();
-        fun.add(new Item(R.string.cascade_title, R.string.cascade_description, R.string.cascade_text, R.mipmap.cascade));
-        fun.add(new Item(R.string.fairyland_title, R.string.fairyland_description, R.string.fairyland_text, R.mipmap.chalet));
-        fun.add(new Item(R.string.museum_title, R.string.museum_description, R.string.museum_text, R.mipmap.fairyland));
-        fun.add(new Item(R.string.chalet_title, R.string.chalet_description, R.string.chalet_text, R.mipmap.museum));
+        fun.add(new Item(R.string.cascade_title, R.string.cascade_description, R.string.cascade_text, R.drawable.cascade));
+        fun.add(new Item(R.string.fairyland_title, R.string.fairyland_description, R.string.fairyland_text, R.drawable.chalet));
+        fun.add(new Item(R.string.museum_title, R.string.museum_description, R.string.museum_text, R.drawable.fairyland));
+        fun.add(new Item(R.string.chalet_title, R.string.chalet_description, R.string.chalet_text, R.drawable.museum));
 
         // Create an {@link ItemAdapter}, whose data source is a list of {@link Item}s. The
         // adapter knows how to create list items for each item in the list.
@@ -44,9 +50,26 @@ public class RecreationFragment extends Fragment {
         // {@link ListView} will display list items for each {@link Item} in the list.
         listView.setAdapter(adapter);
 
-//        TextView textView = new TextView(getActivity());
-//        textView.setText(R.string.hello_blank_fragment);
+        //Create a click listener to launch the detail fragment
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView < ? > adapter, View view, int position, long arg){
+                //Intent detail = new Intent (getContext(), DetailFragment.class);
+
+
+                //Instantiate the Fragment Manager
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                DetailFragment fragment = new DetailFragment();
+                fragmentTransaction.add(R.id.viewpager, fragment);
+                fragmentTransaction.commit();
+            }
+        });
+
         return rootView;
+
+
     }
 
 }
