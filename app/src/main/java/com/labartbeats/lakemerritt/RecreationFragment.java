@@ -1,5 +1,6 @@
 package com.labartbeats.lakemerritt;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,8 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
+import static android.R.attr.data;
+import static android.R.attr.duration;
 import static android.R.attr.fragment;
 //import android.app.FragmentTransaction;
 
@@ -56,13 +61,20 @@ public class RecreationFragment extends Fragment {
             public void onItemClick(AdapterView < ? > adapter, View view, int position, long arg){
                 //Intent detail = new Intent (getContext(), DetailFragment.class);
 
+                //Toast to check thefunctionality of the clickListener
+//                Context context = getContext();
+//                CharSequence text = "Hello toast!";
+//                int duration = Toast.LENGTH_SHORT;
+//
+//                Toast toast = Toast.makeText(context, text, duration);
+//                toast.show();
 
                 //Instantiate the Fragment Manager
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 DetailFragment fragment = new DetailFragment();
-                fragmentTransaction.add(R.id.viewpager, fragment);
+                fragmentTransaction.add(R.id.activity_main, fragment);
                 fragmentTransaction.commit();
             }
         });
