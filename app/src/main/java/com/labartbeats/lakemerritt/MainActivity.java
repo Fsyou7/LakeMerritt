@@ -32,7 +32,14 @@ public class MainActivity extends AppCompatActivity {
         //Remove the drop shadow from the action bar
         getSupportActionBar().setElevation(0);
 
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

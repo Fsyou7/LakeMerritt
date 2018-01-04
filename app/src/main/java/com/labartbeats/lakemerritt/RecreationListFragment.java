@@ -1,6 +1,5 @@
 package com.labartbeats.lakemerritt;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,25 +12,20 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ListFragment extends Fragment {
+public class RecreationListFragment extends Fragment {
 
-
-    public ListFragment() {
+    public RecreationListFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View rootView = inflater.inflate(R.layout.item_list, container, false);
-
-
 
         // Create a list of words
         ArrayList<Item> fun = new ArrayList<Item>();
@@ -57,15 +51,6 @@ public class ListFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView < ? > adapter, View view, int position, long arg){
-                //Intent detail = new Intent (getContext(), DetailFragment.class);
-
-                //Toast to check thefunctionality of the clickListener
-//                Context context = getContext();
-//                CharSequence text = "Hello toast!";
-//                int duration = Toast.LENGTH_SHORT;
-//
-//                Toast toast = Toast.makeText(context, text, duration);
-//                toast.show();
 
                 //Instantiate the Fragment Manager
                 FragmentManager fragmentManager = getFragmentManager();
@@ -80,5 +65,4 @@ public class ListFragment extends Fragment {
 
         return rootView;
     }
-
 }
